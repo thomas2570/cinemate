@@ -18,22 +18,22 @@ export function ExploreGallery() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <Link to="/" className="inline-flex items-center text-gray-400 hover:text-white transition-colors mb-6 uppercase tracking-widest text-xs font-semibold">
+            <Link to="/" className="inline-flex items-center text-charcoal/60 hover:text-charcoal transition-colors mb-6 uppercase tracking-widest text-xs font-semibold">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
             </Link>
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-serif text-white tracking-tight"
+              className="text-5xl md:text-6xl font-serif text-charcoal tracking-tight"
             >
-              The <span className="text-gold-400 italic">Master Collection</span>
+              The <span className="text-primary italic">Master Collection</span>
             </motion.h1>
           </div>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-gray-400 font-light max-w-md"
+            className="text-charcoal/70 font-light max-w-md"
           >
             A complete archive of our finest moments, capturing love stories in their purest and most grand forms across the globe.
           </motion.p>
