@@ -48,7 +48,7 @@ export function ExploreGallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "100px" }}
               transition={{ duration: 0.5, delay: (index % 10) * 0.1 }}
-              className="break-inside-avoid relative group overflow-hidden rounded-sm"
+              className="break-inside-avoid relative group overflow-hidden rounded-2xl"
             >
               <img 
                 src={src} 

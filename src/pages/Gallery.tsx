@@ -45,7 +45,7 @@ export function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: (index % 3) * 0.2 }}
-              className="group cursor-pointer relative h-96 overflow-hidden"
+              className="group cursor-pointer relative h-96 overflow-hidden rounded-2xl"
             >
               <img 
                 src={album.img} 
