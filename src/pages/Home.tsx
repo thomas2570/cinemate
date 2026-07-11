@@ -24,20 +24,20 @@ export function Home() {
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-6 tracking-tight leading-tight"
+            initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.2 }}
+            className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-tighter leading-[0.9]"
           >
             Premium Wedding<br />
-            <span className="text-gold-400 italic">Photography & Films.</span>
+            <span className="text-gold-400 italic font-light">Photography & Films.</span>
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="text-lg md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto font-light tracking-wide"
+            initial={{ opacity: 0, y: 30, filter: 'blur(10px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.4 }}
+            className="text-lg md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto font-light tracking-wide"
           >
             Capturing your grandest moments with uncompromised quality. 
             <br className="hidden md:block" /> A complete wedding photography and cinematography agency.
@@ -45,18 +45,18 @@ export function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link 
               to="/explore"
-              className="inline-block px-10 py-4 bg-white/5 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 uppercase tracking-widest text-sm font-semibold rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              className="inline-block px-10 py-4 bg-white/5 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-500 uppercase tracking-[0.2em] text-xs font-semibold rounded-full shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
               Explore Gallery
             </Link>
             <Link 
               to="/book"
-              className="inline-block px-10 py-4 bg-gold-400 border border-gold-400 text-black hover:bg-white hover:border-white transition-all duration-300 uppercase tracking-widest text-sm font-semibold rounded-sm shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
+              className="inline-block px-10 py-4 bg-gold-400 border border-gold-400 text-black hover:bg-white hover:border-white transition-all duration-500 uppercase tracking-[0.2em] text-xs font-semibold rounded-full shadow-[0_0_20px_rgba(226,194,122,0.2)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
             >
               Book Now
             </Link>

@@ -67,11 +67,13 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'glass py-4' : 'bg-transparent py-6'
+      className={`fixed top-0 w-full z-50 transition-all duration-500 flex justify-center ${
+        isScrolled ? 'pt-4 px-4' : 'pt-8 px-6'
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className={`w-full max-w-6xl transition-all duration-700 rounded-full px-6 md:px-10 flex items-center justify-between ${
+        isScrolled ? 'glass py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)]' : 'bg-transparent py-2'
+      }`}>
         <Link to="/" className="text-xl md:text-2xl font-serif font-bold tracking-widest text-white uppercase z-50 flex items-center gap-3">
           <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
           <span>Cine Mate</span>
@@ -84,13 +86,17 @@ export function Navbar() {
               key={link.name}
               to={`/#${link.id}`}
               onClick={(e) => handleNavClick(e, link.id)}
-              className={`text-sm tracking-widest uppercase transition-colors duration-300 ${
+              className={`text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 relative group ${
                 location.pathname === '/' && activeSection === link.id
-                  ? 'text-gold-400'
-                  : 'text-white/80 hover:text-white'
+                  ? 'text-white'
+                  : 'text-white/60 hover:text-white'
               }`}
             >
               {link.name}
+              {location.pathname === '/' && activeSection === link.id && (
+                <motion.div layoutId="nav-indicator" className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gold-400" />
+              )}
+              <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </Link>
           ))}
         </nav>

@@ -49,9 +49,9 @@ export function About() {
               <img 
                 src="/photo/Screenshot 2026-07-11 171035.png" 
                 alt="Photographer" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-3xl"
               />
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 border border-gold-400 -z-10 hidden md:block"></div>
+              <div className="absolute -bottom-6 -right-6 w-full h-full border border-gold-400/30 rounded-3xl -z-10 hidden md:block transition-transform duration-700 hover:translate-x-2 hover:translate-y-2"></div>
             </div>
           </motion.div>
           
@@ -102,17 +102,17 @@ export function About() {
             <p className="text-gold-400 tracking-widest uppercase text-sm">Words from our couples</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {testimonials.map((t, idx) => (
               <motion.div 
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.2 }}
-                className="glass p-10 relative"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ type: "spring", stiffness: 50, damping: 20, delay: idx * 0.2 }}
+                className="relative p-10 md:p-14 border border-white/5 bg-white/[0.02] rounded-3xl hover:bg-white/[0.05] transition-colors duration-500 group"
               >
-                <div className="text-6xl text-gold-400/20 absolute top-6 left-6 font-serif">"</div>
+                <div className="text-8xl text-gold-400/10 absolute top-4 left-6 font-serif group-hover:text-gold-400/20 transition-colors duration-500">"</div>
                 <p className="text-gray-300 text-lg italic leading-relaxed mb-8 relative z-10">"{t.text}"</p>
                 <div>
                   <h4 className="text-white font-serif text-xl">{t.name}</h4>
@@ -135,11 +135,11 @@ export function About() {
           {faqs.map((faq, idx) => (
             <motion.div 
               key={idx}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="border border-white/10 p-6 hover:border-gold-400/50 transition-colors"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ type: "spring", stiffness: 50, damping: 20, delay: idx * 0.1 }}
+              className="border border-white/10 p-8 rounded-2xl bg-white/[0.01] hover:bg-white/[0.03] hover:border-gold-400/50 transition-all duration-300"
             >
               <h3 className="text-xl font-serif text-white mb-3">{faq.q}</h3>
               <p className="text-gray-400 font-light leading-relaxed">{faq.a}</p>

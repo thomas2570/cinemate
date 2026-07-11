@@ -52,10 +52,19 @@ export function Gallery() {
                 alt={album.title} 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition-colors duration-500"></div>
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
               
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                <h3 className="text-3xl font-serif text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  {album.title}
+                </h3>
+                <p className="text-gold-400 text-xs tracking-[0.2em] uppercase mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                  {album.location}
+                </p>
+              </div>
+
               <div className="absolute top-6 left-6 flex space-x-2">
-                <span className="bg-gold-400/90 text-black text-xs font-semibold uppercase tracking-widest px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <span className="bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-semibold uppercase tracking-[0.2em] px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {album.type}
                 </span>
               </div>
@@ -73,7 +82,7 @@ export function Gallery() {
 
         {showAll ? null : (
           <div className="mt-20 text-center">
-            <button onClick={() => setShowAll(true)} className="px-10 py-4 bg-transparent border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 uppercase tracking-widest text-sm font-semibold rounded-sm shadow-[0_0_20px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
+            <button onClick={() => setShowAll(true)} className="px-10 py-4 bg-transparent border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 uppercase tracking-[0.2em] text-xs font-semibold rounded-full shadow-[0_0_20px_rgba(255,255,255,0.02)] hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer">
               View All Photos
             </button>
           </div>

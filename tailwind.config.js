@@ -14,14 +14,14 @@ export default {
           foreground: 'var(--primary-foreground)',
         },
         gold: {
-          400: '#D4AF37',
-          500: '#C5A017',
+          400: '#E6C27A',
+          500: '#D4AF37',
           600: '#B08D07',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'],
       },
     },
   },
