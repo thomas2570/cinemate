@@ -7,23 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'rgb(var(--background))',
-        foreground: 'rgb(var(--foreground))',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
         primary: {
-          DEFAULT: 'rgb(var(--primary))',
-          foreground: 'rgb(var(--primary-foreground))',
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)',
         },
         gold: {
-          400: '#b8935f',
-          500: '#a68250',
-          600: '#947040',
-        },
-        ivory: '#faf6f1',
-        charcoal: '#2b2622',
+          400: '#E6C27A',
+          500: '#D4AF37',
+          600: '#B08D07',
+        }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Montserrat', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'serif'],
       },
     },
   },

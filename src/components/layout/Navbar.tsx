@@ -10,7 +10,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -72,9 +72,9 @@ export function Navbar() {
       }`}
     >
       <div className={`w-full max-w-6xl transition-all duration-700 rounded-full px-6 md:px-10 flex items-center justify-between ${
-        isScrolled ? 'bg-ivory/95 backdrop-blur-md shadow-xl shadow-black/5 py-3' : 'bg-transparent py-2'
+        isScrolled ? 'glass py-3 shadow-[0_10px_40px_rgba(0,0,0,0.5)]' : 'bg-transparent py-2'
       }`}>
-        <Link to="/" className={`text-xl md:text-2xl font-serif font-bold tracking-widest uppercase z-50 flex items-center gap-3 ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
+        <Link to="/" className="text-xl md:text-2xl font-serif font-bold tracking-widest text-white uppercase z-50 flex items-center gap-3">
           <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
           <span>Cine Mate</span>
         </Link>
@@ -88,22 +88,22 @@ export function Navbar() {
               onClick={(e) => handleNavClick(e, link.id)}
               className={`text-xs font-semibold tracking-[0.2em] uppercase transition-all duration-300 relative group ${
                 location.pathname === '/' && activeSection === link.id
-                  ? (isScrolled ? 'text-gold-500' : 'text-white')
-                  : (isScrolled ? 'text-charcoal/70 hover:text-charcoal' : 'text-white/80 hover:text-white')
+                  ? 'text-white'
+                  : 'text-white/60 hover:text-white'
               }`}
             >
               {link.name}
               {location.pathname === '/' && activeSection === link.id && (
                 <motion.div layoutId="nav-indicator" className="absolute -bottom-2 left-0 right-0 h-[2px] bg-gold-400" />
               )}
-              <div className={`absolute -bottom-2 left-0 right-0 h-[2px] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ${isScrolled ? 'bg-charcoal/30' : 'bg-white/50'}`} />
+              <div className="absolute -bottom-2 left-0 right-0 h-[2px] bg-white/50 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
             </Link>
           ))}
         </nav>
 
         {/* Mobile Toggle */}
         <button
-          className={`md:hidden z-50 ${isScrolled ? 'text-charcoal' : 'text-white'}`}
+          className="md:hidden text-white z-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
