@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Play, X } from 'lucide-react';
+import { Link } from 'react-router';
 
 export function Gallery() {
   const [filter, setFilter] = useState('All');
@@ -60,7 +61,7 @@ export function Gallery() {
         {/* Masonry Grid */}
         <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
           <AnimatePresence>
-            {filteredAlbums.map((album, index) => (
+            {filteredAlbums.slice(0, 3).map((album, index) => (
               <motion.div 
                 layout
                 key={album.title}
@@ -78,14 +79,7 @@ export function Gallery() {
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500"></div>
                 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                  <h3 className="text-2xl font-serif text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    {album.title}
-                  </h3>
-                  <p className="text-primary text-xs tracking-[0.2em] uppercase mt-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                    {album.location}
-                  </p>
-                </div>
+
 
                 {album.type === 'Film' && (
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -97,6 +91,13 @@ export function Gallery() {
               </motion.div>
             ))}
           </AnimatePresence>
+        </div>
+
+        {/* View All Button */}
+        <div className="mt-16 flex justify-center">
+          <Link to="/explore" className="px-8 py-4 rounded-full border border-charcoal/20 text-charcoal hover:bg-charcoal hover:text-white hover:border-charcoal transition-all duration-300 flex items-center uppercase tracking-[0.2em] text-xs font-semibold cursor-pointer">
+            View All Photos
+          </Link>
         </div>
       </div>
 

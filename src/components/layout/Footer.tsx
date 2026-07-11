@@ -1,15 +1,29 @@
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import { FaInstagram, FaFacebook } from 'react-icons/fa';
 
 export function Footer() {
+  const location = useLocation();
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <footer className="bg-black text-white pt-20 pb-10 border-t border-white/10">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <h3 className="text-3xl font-serif tracking-widest uppercase flex items-center gap-3">
-              <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+              <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-white">
+                <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-full h-full object-cover scale-[1.65] translate-x-[2px] object-center" />
+              </div>
               <span>Cine Mate</span>
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
@@ -20,10 +34,10 @@ export function Footer() {
           <div>
             <h4 className="text-gold-400 font-serif mb-6 uppercase tracking-widest text-sm">Quick Links</h4>
             <ul className="space-y-4 text-sm text-gray-400">
-              <li><Link to="/#gallery" className="hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link to="/#services" className="hover:text-white transition-colors">Services</Link></li>
-              <li><Link to="/#about" className="hover:text-white transition-colors">Our Story</Link></li>
-              <li><Link to="/#contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/#gallery" onClick={(e) => handleNavClick(e, 'gallery')} className="text-gray-400 hover:text-white transition-colors block">Gallery</Link></li>
+              <li><Link to="/#services" onClick={(e) => handleNavClick(e, 'services')} className="text-gray-400 hover:text-white transition-colors block">Services</Link></li>
+              <li><Link to="/#about" onClick={(e) => handleNavClick(e, 'about')} className="text-gray-400 hover:text-white transition-colors block">Our Story</Link></li>
+              <li><Link to="/#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-gray-400 hover:text-white transition-colors block">Contact</Link></li>
             </ul>
           </div>
 

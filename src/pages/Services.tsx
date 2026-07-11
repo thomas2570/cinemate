@@ -69,16 +69,16 @@ export function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-7xl font-serif text-white mb-6 tracking-tighter leading-none"
+                className="text-5xl md:text-7xl font-serif text-charcoal mb-6 tracking-tighter leading-none"
               >
-                Our<br/><span className="text-gold-400 italic font-light">Services</span>
+                Our<br/><span className="text-primary italic font-light">Services</span>
               </motion.h1>
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-gray-400 text-lg font-light leading-relaxed"
+                className="text-charcoal/70 text-lg font-light leading-relaxed"
               >
                 A curated suite of photography and cinematography services designed to capture every dimension of your celebration.
               </motion.p>
@@ -90,8 +90,8 @@ export function Services() {
                   transition={{ delay: 0.6 }}
                   className="mt-12 hidden lg:block"
                 >
-                  <button onClick={() => setShowAll(true)} className="group flex items-center gap-4 text-white hover:text-gold-400 transition-colors uppercase tracking-[0.2em] text-xs font-semibold cursor-pointer">
-                    <span className="w-12 h-px bg-white/30 group-hover:bg-gold-400 transition-colors duration-500"></span>
+                  <button onClick={() => setShowAll(true)} className="group flex items-center gap-4 text-charcoal hover:text-primary transition-colors uppercase tracking-[0.2em] text-xs font-semibold cursor-pointer">
+                    <span className="w-12 h-px bg-charcoal/30 group-hover:bg-primary transition-colors duration-500"></span>
                     View All Services
                   </button>
                 </motion.div>
@@ -135,7 +135,7 @@ export function Services() {
 
         {showAll ? null : (
           <div className="mt-16 flex justify-center lg:hidden">
-            <button onClick={() => setShowAll(true)} className="px-8 py-4 rounded-full border border-white/20 text-white hover:bg-white hover:text-black hover:border-white transition-all duration-300 flex items-center uppercase tracking-[0.2em] text-xs font-semibold cursor-pointer">
+            <button onClick={() => setShowAll(true)} className="px-8 py-4 rounded-full border border-charcoal/20 text-charcoal hover:bg-charcoal hover:text-white hover:border-charcoal transition-all duration-300 flex items-center uppercase tracking-[0.2em] text-xs font-semibold cursor-pointer">
               View All Services <ArrowRight className="ml-3 w-4 h-4" />
             </button>
           </div>

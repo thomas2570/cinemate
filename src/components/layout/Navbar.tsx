@@ -57,6 +57,13 @@ export function Navbar() {
     setMobileMenuOpen(false);
   };
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   const links = [
     { name: 'Home', id: 'home' },
     { name: 'Gallery', id: 'gallery' },
@@ -74,8 +81,10 @@ export function Navbar() {
       <div className={`w-full max-w-6xl transition-all duration-700 rounded-full px-6 md:px-10 flex items-center justify-between ${
         isScrolled ? 'bg-ivory/95 backdrop-blur-md shadow-xl shadow-black/5 py-3' : 'bg-transparent py-2'
       }`}>
-        <Link to="/" className={`text-xl md:text-2xl font-serif font-bold tracking-widest uppercase z-50 flex items-center gap-3 ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
-          <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-10 h-10 rounded-full object-cover" />
+        <Link to="/" onClick={handleLogoClick} className={`text-xl md:text-2xl font-serif font-bold tracking-widest uppercase z-50 flex items-center gap-3 ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
+          <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-white">
+            <img src="/photo/Screenshot 2026-07-11 172537.png" alt="Logo" className="w-full h-full object-cover scale-[1.65] translate-x-[2px] object-center" />
+          </div>
           <span>Cine Mate</span>
         </Link>
 
