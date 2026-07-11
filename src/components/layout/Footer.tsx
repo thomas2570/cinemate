@@ -62,7 +62,7 @@ export function Footer() {
           <div>
             <h4 className="text-gold-400 font-serif mb-6 uppercase tracking-widest text-sm">Follow Us</h4>
             <div className="flex space-x-4 text-gray-400">
-              <a href="https://instagram.com/cinemateproductions" target="_blank" rel="noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-gold-400 hover:text-black hover:border-gold-400 transition-colors">
+              <a href="https://www.instagram.com/cinemateproductions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-gold-400 hover:text-black hover:border-gold-400 transition-colors">
                 <FaInstagram size={18} />
               </a>
               <a href="https://www.facebook.com/people/Cinemate-production/61583747432734/#" target="_blank" rel="noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-gold-400 hover:text-black hover:border-gold-400 transition-colors">

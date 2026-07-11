@@ -63,7 +63,7 @@ export function Contact() {
             <div>
               <h3 className="text-2xl font-serif text-charcoal mb-6">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" target="_blank" rel="noreferrer" className="w-12 h-12 border border-charcoal/20 flex items-center justify-center text-charcoal hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 hover:-translate-y-1 rounded-full">
+                <a href="https://www.instagram.com/cinemateproductions?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="w-12 h-12 border border-charcoal/20 flex items-center justify-center text-charcoal hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 hover:-translate-y-1 rounded-full">
                   <FaInstagram size={20} />
                 </a>
                 <a href="https://www.facebook.com/people/Cinemate-production/61583747432734/#" target="_blank" rel="noreferrer" className="w-12 h-12 border border-charcoal/20 flex items-center justify-center text-charcoal hover:bg-primary hover:text-white hover:border-primary transition-all duration-300 hover:-translate-y-1 rounded-full">
