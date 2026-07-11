@@ -26,6 +26,9 @@
   * {
     @apply border-gray-200 dark:border-gray-800;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-black text-white antialiased selection:bg-gold-400/30 selection:text-white;
   }
