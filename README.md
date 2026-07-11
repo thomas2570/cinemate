@@ -1,32 +1,61 @@
-# React + TypeScript + Vite
+# Cinemate Productions - Premium Wedding Photography
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Cinemate Hero Section](/photo/Screenshot%202026-07-11%20172537.png)
 
-Currently, two official plugins are available:
+A luxury, cinematic, and fully responsive frontend website designed specifically for high-end wedding photography and cinematography agencies. Built with a focus on premium aesthetics, smooth animations, and an immersive user experience, it serves as the perfect digital portfolio to showcase visual masterpieces.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Cinematic Hero Section:** Immersive background video with premium typography and glassmorphism elements.
+- **Master Collection Gallery:** A dedicated `/explore` route featuring a massive, fully responsive masonry grid layout capable of beautifully displaying hundreds of high-resolution images.
+- **Smooth Page Transitions & Micro-Animations:** Scroll-triggered reveal animations that bring the content to life seamlessly.
+- **Dynamic Single-Page Feel:** Smooth scrolling navigation alongside dedicated auxiliary routes.
+- **Premium Aesthetics:** A carefully curated black, white, and gold color palette that exudes luxury.
+- **Fully Responsive:** Flawless experience across desktop, tablet, and mobile devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the Oxlint configuration
+This project was developed using modern frontend technologies to ensure optimal performance, scalability, and maintainability:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Routing:** [React Router 8](https://reactrouter.com/)
+- **Icons:** [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## 🚀 Quick Start
+
+To run this project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/thomas2570/cinemate.git
+   cd cinemate
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to the provided local URL (typically `http://localhost:5173`).
+
+## 📦 Building for Production
+
+To create an optimized production build:
+
+```bash
+npm run build
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+This will generate the built assets in the `dist` folder, which can be easily deployed to hosting platforms like Vercel, Netlify, or GitHub Pages.
+
+---
+*Capturing Love Stories Since 8+ Years. Turning Moments into Memories.*
