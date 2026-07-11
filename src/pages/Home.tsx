@@ -27,10 +27,10 @@ export function Home() {
             initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
             animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{ type: "spring", stiffness: 60, damping: 20, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl font-serif text-white mb-6 tracking-tighter leading-[0.9]"
+            className="text-5xl md:text-7xl lg:text-[5.5rem] font-serif text-white mb-6 tracking-tight leading-tight"
           >
             Premium Wedding<br />
-            <span className="text-gold-400 italic font-light">Photography & Films.</span>
+            <span className="text-gold-400 italic">Photography & Films.</span>
           </motion.h1>
           
           <motion.p 
