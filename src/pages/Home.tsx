@@ -13,7 +13,6 @@ export function Home() {
             loop
             muted
             playsInline
-            poster="/photo/Screenshot 2026-07-11 171035.png"
             className="w-full h-full object-cover object-center opacity-70"
           >
             <source src="/photo/Video Project 1.mp4" type="video/mp4" />
